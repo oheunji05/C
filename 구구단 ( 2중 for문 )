@@ -4,13 +4,12 @@ int main (){
 	
 	//2~9단 가로로 출력 
 	
-	int dan,n;
+    int dan,n;
 	for (n=1;n<=9;n++){
 		for (dan=2;dan<=9;dan++){
-			int re=dan*n;
-			printf("%d * %d = %2d   ",dan,n,re); // %2d = 띄어쓰기  
+			printf("%d * %d = %2d   ",dan,n,dan*n); // %2d = 띄어쓰기  
 		}
-			printf("\n") ;
-	}
+		printf("\n");
+	} 
 	return 0;
 }
