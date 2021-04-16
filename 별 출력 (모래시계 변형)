@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main (){
+
+    //모래시계 변형  
+ 	int i,j;
+ 	int start=0;
+ 	int end=6;
+ 	for (i=0;i<7;i++){
+ 		for (j=0;j<7;j++){
+ 			if (start == j){
+ 				printf("*");
+			 }
+			else if (end ==j){
+			 	printf("*");
+			 }
+			 else{
+			 	printf(" ");
+			 }
+		 }
+		 start++;
+		 end--;
+		 printf("\n");
+	 }
+   
+	return 0;
+}
