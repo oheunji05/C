@@ -23,3 +23,7 @@ int main() {
 	printf("%c", str[1]);
 	str[3] = '\0';
 	printf("%s\n", str);
+	
+	return 0;
+	
+	}
