@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+  //입력된 5개의 데이터 중 가장 큰 값(max)과
+	//그 위치(maxi)를 출력
+  
+int ar[5], max = 0, maxi = 0;
+	for (int i = 0; i < 5; i++) {
+		scanf("%d", &ar[i]);
+	}
+	for (int i = 0; i < 5; i++) {
+		if (ar[i] > max) {
+			max = ar[i];
+			maxi = i;
+		}
+	}
+	printf("%d\n", max);
+	printf("%d번째 방", maxi);
+  
+  return 0;
+  }
+  
