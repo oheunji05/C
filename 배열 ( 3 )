@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+	 
+	//입력된 문자열을 뒤집어 출력
+	char str[20];
+	int i = 20;
+	scanf("%s", str);
+	while (str[i] != '\0') {
+		i++;
+	}
+	for (int k = i; k <= 0; k--) {
+		printf("%c", str[k]);
+	}
+  
+  return 0;
+  
+  }
