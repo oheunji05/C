@@ -8,3 +8,18 @@ int main() {
 	char str[20], str1[20];
 	scanf("%s %s", &str, &str1);
 	printf("%s %s", str, str1);
+	
+	-----------------------------------------------------------
+	
+	char str[20];
+	scanf("%[^\n]", str); // enter키를 입력받을 때 까지 
+	printf("%s", str);
+
+	-----------------------------------------------------------
+
+	char str[20] = "Hello World";
+	printf("%s\n", str);
+	printf("%c", str[0]);
+	printf("%c", str[1]);
+	str[3] = '\0';
+	printf("%s\n", str);
