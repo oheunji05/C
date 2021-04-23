@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(){
+	
+	//토끼의 다리 수 4개, 닭의 다리 수 2개이다 
+	//토끼와 닭의 전체 다리의 수와 닭과 토끼의 전체 마리 수를
+	//입력받아 토끼와 닭이 각각 몇 마리인지 출력 
+	
+	//int leg, head;
+	//scanf ("%d %d",&leg,&head);
+	//printf("토끼 : %d, 닭 : %d",(leg/2)-head,head*2-(leg/2));
+	
+	//x+y=head
+	//4x+2y=leg
+	//토끼의 머릿수=x , 닭의 머릿수=y
+	//2x+2y=2head
+	//2x=leg -2head
+	//토끼의 머릿수 = (leg -2head)/2
+	//닭의 머릿수 = head - 토끼의 머릿수  
+	
+///////////////////////////////////////////////////////////////////////////////
+
+//	int i,j,a,all;
+//	scanf("%d %d",&a,&all);
+//	for (i=1;i<all;i++){
+//		for (j=1;j<all;j++){
+//			if (4*i+2*j==a)
+//			printf("토끼 : %d, 닭 : %d",i,j); 
+//		}
+//	}
+
+
+
+	
+	return 0;
+}
