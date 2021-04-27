@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+//최대값maxnum, 최소값minnum 구하는 함수 
+
+  int maxnum(int a, int b, int c) {
+  	if (a >= b && a >= c) {
+  		return a;
+  	}
+  	else if (b >= a && b >= c) {
+  		return b;
+  	}
+  	else 
+  		return c;
+  }
+  int minnum(int a, int b, int c) {
+  	if (a <= b && a <= c) {
+  		return a;
+  	}
+  	else if (b <= a && b <= c) {
+  		return b;
+  	}
+  	else
+  		return c;
+  }
+  
+  int main() {
+  	int a, b, c,re1,re2;
+  	scanf("%d %d", &a, &b, &c);
+  	re1 = maxnum(a, b, c);
+  	re2 = minnum(a, b, c);
+  	printf("max = %d, min = %d", re1, re2);
+    
+  	return 0;
+  }
