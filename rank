@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+
+	int scores[10] = { 95,64,78,94,65,71,72,59,45,78 };
+
+	int rank[10] = { 0 };
+	int i, j;
+	for (i = 0; i < 10; i++) {
+		rank[i] = 1;
+		for (j = 0; j < 10; j++) {
+			if (scores[i] < scores[j]) {
+				rank[i]++;
+			}
+		}
+	}
+	printf("학생 등수\n");
+	for (i = 0; i < 10; i++) {
+		printf("학번 : %3d, 등수 : %3d\n", i + 1, rank[i]);
+
+	}
+	return 0;
+}
