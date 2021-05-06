@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	
+	//int* ptr1 = 1000;
+	//printf("%d\n", ptr1); //1000
+	//ptr1++; //1증가란 int형 4바이트 증가를 의미
+	//printf("%d\n", ptr1); //1004
+
+	return 0;
+}
