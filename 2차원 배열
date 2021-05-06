@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	
+	char str[3][10] = { "kim","hong","chu" };//[3]=행 [10]=열
+	char* pStr[3] = { str[0],str[1],str[2] };
+	printf("%s\n", str[0]);
+	printf("%s\n", str[1]);
+	printf("%s\n", str[2]);
+	printf("%c\n", str[0][0]);//k
+	printf("%c\n", str[0][1]);//i
+	printf("%c\n", str[0][2]);//m
+
+
+	printf("%s\n", *pStr);
+	printf("%s\n", *(pStr+1));
+	printf("%s\n", *(pStr+2));
+
+
+	return 0;
+}
