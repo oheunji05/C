@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main() {
+
+	//1부터 10까지의 정수를 입력받는 중 입력된 정수가 범위를 벗어나면 
+	//그때까지 입력된 각 숫자의 개수를 작은 수부터 출력하는 프로그램
+	//입력 결과 5 6 10 6 3 5 3 5 0
+	//출력 결과 3 : 2개
+	//          5 : 3개
+	//          6 : 2개
+	//          10 : 1개
+
+	int num, i;
+	int count[11] = { 0 };
+	while (1) {
+		scanf("%d", &num);
+		if (num < 1 || num > 10) {
+			break;
+		}
+			count[num]++;
+		}
+	for (i = 0; i <= 10; i++) {
+		if (count[i] > 0) {
+			printf("%d : %d개\n", i, count[i]);
+		}
+	}
+		return 0;
+}
