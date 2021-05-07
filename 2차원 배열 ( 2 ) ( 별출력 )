@@ -1,0 +1,39 @@
+#define _CRT_SECURE_N0_WARNINGS 
+#include <stdio.h>
+int main() {
+
+	//int n;
+	//scanf("%d", &n);
+	//for (int i = 0; i < n; i++) {
+	//	for (int j = 0; j < n; j++) {
+	//		if (i == n - 1 || i == 0 || j == 0 || j == n - 1) {
+	//			printf("*");
+	//		}
+	//	}
+	//}
+
+	//////////////////////////////////////////////////////
+
+	int i, j, a;
+	char arr[100][100] = { 0 };
+	printf("원하는 사각형의 크기를 입력하세요 : \n");
+	scanf("%d", &a);
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < a; j++) {
+			if (i == 0 || j == 0 || i == a - 1 || j == a - 1) {
+				arr[i][j] = '*';
+			}
+			else {
+				arr[i][j] = 32;
+			}
+		}
+	}
+	for (i = 0; i < a; i++) {
+		for (j = 0; j < a; j++) {
+			printf("%c ", arr[i][j]);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
