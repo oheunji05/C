@@ -1,0 +1,24 @@
+#define _CRT_SECURE_N0_WARNINGS 
+#include <stdio.h>
+int main() {
+
+	int arr[3] = { 0 };
+	int t, x = 0; //x=pass한 학생의 수
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 4; j++) {
+			scanf("%d", &t);
+			arr[i] += t;
+		}
+	}
+	for (int i = 0; i < 3; i++) {
+		if (arr[i] / 4 >= 80) {
+			printf("pass\n");
+			x++;
+		}
+		else {
+			printf("fail\n");
+		}
+	}
+	printf("합격 : %d", x);
+	return 0;
+}
