@@ -1,0 +1,47 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define SIDE 100
+
+int arr[SIDE][SIDE];//arr[100][100]
+
+void makeArr(int n) {
+	int cnt = 1; //1,2,3,4,5,6........
+	int row = 0, col = -1;
+	int inc = 1;
+	while (n > 0) {
+		for (int i = 0; i < n; i++) {
+			col += inc; //0 1 2 3
+			arr[row][col] = cnt++; // row 고정
+		}
+		n--;
+		if (n == 0)
+			break;
+		for (int i = 0; i < n; i++) {
+			row += inc;
+			arr[row][col] = cnt++;
+		}
+		inc *= -1; //1 -1 1 -1... 반복
+	}
+}
+
+void printArr(int n) {
+	int i, j;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			printf("%3d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+
+int main() {
+
+	int n = 0;
+	printf("달팽이 배열의 길이 : ");
+	scanf("%d", &n);
+	makeArr(n); // 달팽이 배열 만들기
+	printArr(n);
+  
+	return 0;
+}
