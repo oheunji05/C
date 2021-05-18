@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+// 2부터 100까지의 소수 출력
+int prime(int n) {
+	if (n < 2) {
+		return 0;
+	}
+	for (int i = 2; i < n; i++) {
+		if (n % i == 0)
+			return 0;
+	}
+	return 1; //1이면 소수
+}
+
+
+int main() {
+	for (int i = 2; i < 100; i++) {
+		if (prime(i)) {
+			printf("%4d", i);
+		}
+	}
+  
+	return 0;
+}
