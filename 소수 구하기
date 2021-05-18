@@ -11,7 +11,7 @@ int prime(int n) {
 		if (n % i == 0)
 			return 0;
 	}
-	return 1; //1이면 소수
+	return 1; //1이면 소수라는 뜻
 }
 
 
