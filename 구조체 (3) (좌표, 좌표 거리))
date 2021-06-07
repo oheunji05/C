@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <math.h>
+
+struct Point {
+	int x, y;
+};
+
+int main() {
+	struct Point p;
+	p.x = 1;
+	p.y = 2;
+	printf("x좌표 : %d, y좌표 : %d\n", p.x, p.y);
+
+	//3, 4 좌표의 점을 하나 더 만들어 보세요
+	struct Point p1;
+	p1.x = 3;
+	p1.y = 4;
+	printf("x좌표 : %d, y좌표 : %d\n", p1.x, p1.y);
+
+	//두 점의 거리를 출력
+	double a, b, c;
+	a = p1.x - p.x;
+	b = p1.y - p.y;
+	c = sqrt(a * a + b * b); //sqrt=루트
+	printf("%.2f\n", c);
+	return 0;
+}
