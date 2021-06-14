@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+//구조체를 사용하여 국어 영어 수학 점수를 입력받아 총합 출력
+typedef struct data {
+	char name[20];
+	int Kor;
+	int Eng;
+	int Ma;
+}Stu;
+
+Stu score(Stu per1, Stu per2) {
+	Stu sum;
+	strcpy(sum.name, "총합");
+	sum.Kor = per1.Kor + per2.Kor;
+	sum.Eng = per1.Eng + per2.Eng;
+	sum.Ma = per1.Ma + per2.Ma;
+	return sum;
+}
+
+int main() {
+	Stu per1,per2,sum;
+	scanf("%s %d %d %d", per1.name, &per1.Kor, &per1.Eng, &per1.Ma);
+	scanf("%s %d %d %d", per2.name, &per2.Kor, &per2.Eng, &per2.Ma);
+	printf("%s %d %d %d\n", sum.name,sum.Kor, sum.Eng, sum.Ma);
+	
+	return 0;
+}
