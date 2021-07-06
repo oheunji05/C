@@ -1,0 +1,62 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+//typedef struct Game myGame;
+
+typedef struct Game {
+	char name[20];//캐릭터 이름
+	char weapon[10];//캐릭터 무기 이름
+	int power;//캐릭터 능력치
+}myGame;
+
+int main() {
+	myGame user; // =struct Game user;
+	//캐릭터 유저의 이름과 무기명, 능력치를 입력받아 보시오
+	printf("캐릭터명 입력 : ");
+	scanf("%s", user.name);
+	printf("무기명 입력 : ");
+	scanf("%s", user.weapon);
+	printf("능력치 입력 : ");
+	scanf("%d", &user.power);
+	printf("\n");
+	printf("==나의 캐릭터 정보 출력====\n");
+	printf("캐릭터 명 : %s\n무기명 : %s\n능력치 : %d\n", user.name, user.weapon, user.power);
+
+	return 0;
+}
+---------------------------------------------------------------------------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+
+//학생 5명의 정보를 키보드로 입력받아 출력하는 프로그램을 만드시오.
+
+typedef struct Student {
+	char name[20];//학생 이름
+	int stuNum;//학번
+	int age;//나이
+	char address[100];//집주소
+}STU;
+
+int main() {
+	STU class12[20];
+	for (int i = 0; i < 3; i++){
+		printf("%d번 학생\n", i + 1);
+		printf("이름 입력 : ");
+		scanf("%s", class12[i].name);
+		printf("학번 입력 : ");
+		scanf("%d", &class12[i].stuNum);
+		printf("나이 입력 : ");
+		scanf("%d", &class12[i].age);
+		printf("집주소 입력 : ");
+		scanf(" %[^\n]", class12[i].address);
+	}
+	printf("\n");
+	printf("1번 학생의 정보\n");
+	printf("이름 : %s\n학번 : %d\n나이 : %d\n집주소 : %s\n", class12[0].name, class12[0].stuNum, class12[0].age, class12[0].address);
+	printf("2번 학생의 정보\n");
+	printf("이름 : %s\n학번 : %d\n나이 : %d\n집주소 : %s\n", class12[1].name, class12[1].stuNum, class12[1].age, class12[1].address);
+	printf("3번 학생의 정보\n");
+	printf("이름 : %s\n학번 : %d\n나이 : %d\n집주소 : %s\n", class12[2].name, class12[2].stuNum, class12[2].age, class12[2].address);
+	return 0;
+}
