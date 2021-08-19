@@ -119,3 +119,42 @@ int main() {
 
 	return 0;
 }
+------------------------------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int i = 7, * p, ** pp;//*를 두 개 붙이면 두 번 옮겨감  
+
+	p = &i; //i의 주소 (예: 1f2312)
+	pp = &p;
+
+	printf("p\'s Address = %p\n", p); //0126A000
+	printf("pp\'s Address = %p\n", pp); //0126A140
+
+	(*p)++; //값이 변경
+	// *p++; 주소 변경 
+	printf("i=%d \t", i); //8
+	printf("*p=%d \t", *p); //8
+	printf("*pp=%d \n", **pp); //8  예) **p -> *p -> i
+
+	(*pp)++;
+	printf("i=%d \t", i); //9
+	printf("*p=%d \t", *p); //9
+	printf("*pp=%d \n", **pp); //9
+	return 0;
+}
+------------------------------------------------------------
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+
+	char string[] = "Hello";
+	char* pstr = string;
+	while (*pstr) {
+		putchar(*pstr++);
+	}
+
+	return 0;
+}
