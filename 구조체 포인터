@@ -1,0 +1,43 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//typedef struct STU stu;
+//struct STU {
+//	char name[10];
+//	int age;
+//};
+
+typedef struct STU {
+	char name[10];
+	int age;
+}stu;
+
+int main() {
+	stu* student;
+	student = (stu*)malloc(sizeof(stu));//void --> 형변환  구조체 포인터기 때문에 (stu*), 만약 int형이면 (int*)
+	//student->name="KIM"; 틀림
+	strcpy(student->name, "KIM");
+	student->age = 17; //(*student).age=17;
+	printf("%s %d\n", student->name, student->age);
+	free(student);//malloc로 만들고 free로 메모리에서 해제
+
+	return 0;
+}
+-------------------------------------------------------------------------------------------------------------------
+typedef struct _M {
+	char name[20];
+	int age;
+}mypro;
+
+int main() {
+	mypro* me;
+	me = (mypro*)malloc(sizeof(mypro));
+	strcpy(me->name, "oh");
+	me->age = 17;
+	printf("%s %d", me->name, me->age);
+	free(me);
+
+	return 0;
+}
