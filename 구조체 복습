@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+//구조체-종합선물세트
+
+typedef struct stu Stu; //struct stu 이름 : Stu
+
+struct stu {
+	//멤버 변수
+	char name[10];
+	int age;
+	int score;
+};
+
+//typedef struct stu {
+//char name[10];
+//int age;
+//int score;
+//}Stu;
+
+int main(){
+
+	Stu s1 = { "KIM",17,19 };
+	Stu s2 = { "PARK",17,80 };
+
+	printf("%s %d %d\n", s1.name, s1.age, s1.score);
+	printf("%s %d %d\n", s2.name, s2.age, s2.score);
+	
+	return 0;
+}
