@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//다음과 같은 n*n 배열 구조를 출력해보자.
+//입력이 3인 경우 다음과 같이 출력한다.
+//3 2 1
+//6 5 4
+//9 8 7
+//
+//입력이 5인 경우는 다음과 같이 출력한다.
+//5 4 3 2 1
+//10 9 8 7 6
+//15 14 13 12 11
+//20 19 18 17 16
+//25 24 23 22 21
+
+int main() {
+	int n;
+	int a = 1;
+	int arr[101][101] = { 0 };
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		for (int j = n-1; j >= 0; j--) {
+			arr[i][j] = a++;
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
